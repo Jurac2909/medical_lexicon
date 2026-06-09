@@ -42,10 +42,13 @@ python main.py --cli "The patient has pneumonia and was given insulin therapy."
 ## Kako se koristi
 
 1. Unesite (ili zalijepite) tekst na engleskom u gornje polje.
-2. Kliknite **Analyze** - neuronska mreza pronalazi pojmove, a opisi se
+2. Kliknite **Analyze** - neuronska mreza pronalazi pojmove, a definicije se
    asinkrono dohvacaju s Wikipedije.
-3. Rezultati se prikazuju u tablici.
-4. **CSV** ili **PDF** sprema rezultate u datoteku.
+3. Rezultati se prikazuju u tablici (pojam, kategorija, pouzdanost).
+   **Definicije pojmova se NE prikazuju u grafickom sucelju** - vidljive su
+   iskljucivo u izvezenim CSV i PDF dokumentima.
+4. **CSV** ili **PDF** sprema rezultate u datoteku, zajedno s definicijama
+   pojmova.
 
 Sucelje aplikacije i oznake kategorija (disease, symptom, therapy,
 diagnostics, anatomy) su na engleskom jeziku.
@@ -70,5 +73,7 @@ NTP_new/
 ## Napomene
 
 - Model je treniran na engleskom jeziku pa najbolje radi s engleskim tekstom.
+- **Definicije pojmova nalaze se samo u izvezenim CSV i PDF dokumentima**, a ne
+  u grafickom sucelju (tablica prikazuje samo pojam, kategoriju i pouzdanost).
 - Sve iznimke (npr. nedostupna mreza, neinstaliran `reportlab`) biljeze se u
   `log.txt` zahvaljujuci dekoratoru `@log_exceptions`.
