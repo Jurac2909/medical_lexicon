@@ -1,0 +1,12 @@
+# Neural network (NER) - transformer model
+transformers>=4.30.0
+torch>=2.0.0
+
+# Asynchronous data fetching
+aiohttp>=3.8.0
+
+# PDF export
+reportlab>=4.0.0
+
+# Note: tkinter ships with the standard Python install (Windows and macOS).
+# On some Linux distributions install it separately: sudo apt install python3-tk

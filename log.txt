@@ -1,0 +1,32 @@
+2026-06-09 20:13:53 | INFO     | Loading model 'Clinical-AI-Apollo/Medical-NER'...
+2026-06-09 20:13:56 | INFO     | Model loaded successfully.
+2026-06-09 20:13:56 | INFO     | Found 25 medical terms.
+2026-06-09 20:13:57 | INFO     | No Wikipedia article for 'lifestyle modifications'.
+2026-06-09 20:13:57 | INFO     | No Wikipedia article for 'walls of the arteries'.
+2026-06-09 20:13:58 | INFO     | Fetched descriptions for 25 terms.
+2026-06-09 20:20:00 | INFO     | Loading model 'Clinical-AI-Apollo/Medical-NER'...
+2026-06-09 20:20:02 | INFO     | Model loaded successfully.
+2026-06-09 20:20:02 | INFO     | Found 1 medical terms.
+2026-06-09 20:20:02 | INFO     | Found 1 medical terms.
+2026-06-09 20:20:02 | INFO     | Found 2 medical terms.
+2026-06-09 20:21:21 | INFO     | Loading model 'Clinical-AI-Apollo/Medical-NER'...
+2026-06-09 20:21:24 | INFO     | Model loaded successfully.
+2026-06-09 20:21:25 | INFO     | Found 27 medical terms.
+2026-06-09 20:21:26 | INFO     | No Wikipedia article for 'lifestyle modifications'.
+2026-06-09 20:21:26 | INFO     | No Wikipedia article for 'walls of the arteries'.
+2026-06-09 20:21:26 | INFO     | No Wikipedia article for 'salt intake'.
+2026-06-09 20:21:26 | INFO     | Fetched descriptions for 27 terms.
+2026-06-09 20:21:55 | INFO     | PDF exported: C:\Users\X\Desktop\NTP_new\medical_terms.pdf (27 terms).
+2026-06-09 20:23:00 | INFO     | Loading model 'Clinical-AI-Apollo/Medical-NER'...
+2026-06-09 20:23:01 | INFO     | Model loaded successfully.
+2026-06-09 20:23:01 | INFO     | Found 2 medical terms.
+2026-06-09 20:29:33 | INFO     | Loading model 'Clinical-AI-Apollo/Medical-NER'...
+2026-06-09 20:29:35 | INFO     | Model loaded successfully.
+2026-06-09 20:29:35 | INFO     | Found 11 medical terms.
+2026-06-09 20:29:36 | INFO     | No Wikipedia article for 'blood pressure monitoring'.
+2026-06-09 20:29:36 | INFO     | Fetched descriptions for 11 terms.
+2026-06-09 20:31:54 | INFO     | Loading model 'Clinical-AI-Apollo/Medical-NER'...
+2026-06-09 20:31:55 | INFO     | Model loaded successfully.
+2026-06-09 20:31:55 | INFO     | Found 11 medical terms.
+2026-06-09 20:31:56 | INFO     | No Wikipedia article for 'blood pressure monitoring'.
+2026-06-09 20:31:56 | INFO     | Fetched descriptions for 11 terms.
