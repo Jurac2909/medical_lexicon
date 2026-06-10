@@ -14,11 +14,21 @@ _CATEGORY_MAP = {
     "BIOLOGICAL_STRUCTURE": "anatomy",
 }
 
-RELEVANT_CATEGORIES = {"disease", "symptom", "therapy", "diagnostics", "anatomy"}
+RELEVANT_CATEGORIES = {
+    "disease",
+    "symptom",
+    "therapy",
+    "diagnostics",
+    "anatomy",
+}
 
 
 class MedicalNERAnalyzer:
-    def __init__(self, model_name: str = MODEL_NAME, min_score: float = 0.0):
+    def __init__(
+        self,
+        model_name: str = MODEL_NAME,
+        min_score: float = 0.0,
+    ) -> None:
         self.model_name = model_name
         self.min_score = min_score
         self._pipeline = None
@@ -41,7 +51,9 @@ class MedicalNERAnalyzer:
 
         self._log.info("Loading model '%s'...", self.model_name)
         tokenizer = AutoTokenizer.from_pretrained(self.model_name)
-        model = AutoModelForTokenClassification.from_pretrained(self.model_name)
+        model = AutoModelForTokenClassification.from_pretrained(
+            self.model_name
+        )
         self._pipeline = pipeline(
             task="ner",
             model=model,

@@ -66,8 +66,8 @@ class PDFExporter(Exporter):
         story = [
             Paragraph("Report: medical terms", styles["Title"]),
             Paragraph(
-                f"Generated: {datetime.now():%Y-%m-%d %H:%M:%S} &nbsp;|&nbsp; "
-                f"Number of terms: {len(terms)}",
+                f"Generated: {datetime.now():%Y-%m-%d %H:%M:%S} "
+                f"&nbsp;|&nbsp; Number of terms: {len(terms)}",
                 styles["Normal"],
             ),
             Spacer(1, 0.5 * cm),
@@ -86,17 +86,27 @@ class PDFExporter(Exporter):
                 ]
             )
 
-        table = Table(rows, colWidths=[3.5 * cm, 2.5 * cm, 2 * cm, 8.5 * cm], repeatRows=1)
+        table = Table(
+            rows,
+            colWidths=[3.5 * cm, 2.5 * cm, 2 * cm, 8.5 * cm],
+            repeatRows=1,
+        )
         table.setStyle(
             TableStyle(
                 [
-                    ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#2c6e91")),
+                    ("BACKGROUND", (0, 0), (-1, 0),
+                     colors.HexColor("#2c6e91")),
                     ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
                     ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
                     ("FONTSIZE", (0, 0), (-1, -1), 8),
                     ("VALIGN", (0, 0), (-1, -1), "TOP"),
                     ("GRID", (0, 0), (-1, -1), 0.5, colors.grey),
-                    ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.HexColor("#eef5f9")]),
+                    (
+                        "ROWBACKGROUNDS",
+                        (0, 1),
+                        (-1, -1),
+                        [colors.white, colors.HexColor("#eef5f9")],
+                    ),
                 ]
             )
         )

@@ -17,7 +17,7 @@ REQUEST_TIMEOUT = 10
 
 
 class TermInfoFetcher:
-    def __init__(self, max_concurrency: int = MAX_CONCURRENCY):
+    def __init__(self, max_concurrency: int = MAX_CONCURRENCY) -> None:
         self.max_concurrency = max_concurrency
         self._log = get_logger()
 
@@ -52,7 +52,10 @@ class TermInfoFetcher:
 
         extract = (page.get("extract") or "").strip()
         if extract:
-            term.description = extract if len(extract) <= 400 else extract[:397] + "..."
+            term.description = (
+                extract if len(extract) <= 400
+                else extract[:397] + "..."
+            )
         title = page.get("title", term.text).replace(" ", "_")
         term.source_url = f"https://en.wikipedia.org/wiki/{title}"
 
@@ -67,9 +70,13 @@ class TermInfoFetcher:
         timeout = aiohttp.ClientTimeout(total=REQUEST_TIMEOUT)
         headers = {"User-Agent": USER_AGENT}
 
-        async with aiohttp.ClientSession(timeout=timeout, headers=headers) as session:
+        async with aiohttp.ClientSession(
+            timeout=timeout, headers=headers
+        ) as session:
             tasks = [
-                asyncio.create_task(self._fetch_one(session, term, semaphore))
+                asyncio.create_task(
+                    self._fetch_one(session, term, semaphore)
+                )
                 for term in terms
             ]
             await asyncio.gather(*tasks)

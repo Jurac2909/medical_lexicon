@@ -30,3 +30,39 @@
 2026-06-09 20:31:55 | INFO     | Found 11 medical terms.
 2026-06-09 20:31:56 | INFO     | No Wikipedia article for 'blood pressure monitoring'.
 2026-06-09 20:31:56 | INFO     | Fetched descriptions for 11 terms.
+2026-06-10 10:26:10 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpla1nk514\out.csv (2 terms).
+2026-06-10 10:26:10 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp68yl31mo\out.csv (2 terms).
+2026-06-10 10:26:10 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp3hlzpqe9\ret.csv (2 terms).
+2026-06-10 10:26:11 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmplkh9wtkw\out.pdf (2 terms).
+2026-06-10 10:26:11 | INFO     | No Wikipedia article for 'stroke' (HTTP 403).
+2026-06-10 10:26:11 | INFO     | No Wikipedia article for 'zzz'.
+2026-06-10 10:26:11 | INFO     | Found 6 medical terms.
+2026-06-10 10:26:11 | INFO     | Found 1 medical terms.
+2026-06-10 10:26:11 | INFO     | Found 0 medical terms.
+2026-06-10 10:26:11 | INFO     | Found 0 medical terms.
+2026-06-10 10:26:11 | INFO     | Found 1 medical terms.
+2026-06-10 10:26:11 | INFO     | Found 3 medical terms.
+2026-06-10 10:58:57 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpb8x5u23v\out.csv (2 terms).
+2026-06-10 10:58:57 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp1n2eydfp\out.csv (2 terms).
+2026-06-10 10:58:57 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp_x_09kor\ret.csv (2 terms).
+2026-06-10 10:58:58 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmp52hbrtcx\out.pdf (2 terms).
+2026-06-10 10:58:58 | INFO     | No Wikipedia article for 'stroke' (HTTP 403).
+2026-06-10 10:58:58 | INFO     | No Wikipedia article for 'zzz'.
+2026-06-10 10:58:58 | INFO     | Found 6 medical terms.
+2026-06-10 10:58:58 | INFO     | Found 1 medical terms.
+2026-06-10 10:58:58 | INFO     | Found 0 medical terms.
+2026-06-10 10:58:58 | INFO     | Found 0 medical terms.
+2026-06-10 10:58:58 | INFO     | Found 1 medical terms.
+2026-06-10 10:58:58 | INFO     | Found 3 medical terms.
+2026-06-10 11:06:11 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp9kk5sr2j\out.csv (2 terms).
+2026-06-10 11:06:11 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp7nvjl3qw\out.csv (2 terms).
+2026-06-10 11:06:11 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmptzdiiq23\ret.csv (2 terms).
+2026-06-10 11:06:11 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmpg_h2oygn\out.pdf (2 terms).
+2026-06-10 11:06:11 | INFO     | No Wikipedia article for 'stroke' (HTTP 403).
+2026-06-10 11:06:11 | INFO     | No Wikipedia article for 'zzz'.
+2026-06-10 11:06:11 | INFO     | Found 6 medical terms.
+2026-06-10 11:06:11 | INFO     | Found 1 medical terms.
+2026-06-10 11:06:11 | INFO     | Found 0 medical terms.
+2026-06-10 11:06:11 | INFO     | Found 0 medical terms.
+2026-06-10 11:06:11 | INFO     | Found 1 medical terms.
+2026-06-10 11:06:11 | INFO     | Found 3 medical terms.

@@ -7,11 +7,12 @@ import sys
 from app.fetcher import TermInfoFetcher
 from app.logger import log_exceptions
 from app.ner import MedicalNERAnalyzer
+from app.protocols import Analyzer
 
 
 @log_exceptions
 def run_cli(text: str) -> None:
-    analyzer = MedicalNERAnalyzer()
+    analyzer: Analyzer = MedicalNERAnalyzer()
     terms = analyzer.analyze(text)
     if terms:
         asyncio.run(TermInfoFetcher().fetch_all(terms))
@@ -28,7 +29,9 @@ def run_cli(text: str) -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Analyze medical terms from text.")
+    parser = argparse.ArgumentParser(
+        description="Analyze medical terms from text."
+    )
     parser.add_argument(
         "--cli",
         metavar="TEXT",
