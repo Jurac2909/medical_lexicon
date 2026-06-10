@@ -69,7 +69,7 @@ class MedicalNERApp:
         header.pack(fill="x")
         tk.Label(
             header,
-            text="🩺  Medical Term Analysis",
+            text="Medical Term Analysis",
             bg=ACCENT,
             fg="white",
             font=("Segoe UI", 17, "bold"),
@@ -133,7 +133,7 @@ class MedicalNERApp:
         ttk.Label(
             main,
             text=(
-                "ℹ  Term definitions are not shown here — they are "
+                "Term definitions are not shown here - they are "
                 "included in the CSV and PDF exports."
             ),
             foreground="#6b7a86",

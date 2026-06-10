@@ -59,9 +59,6 @@ Projekt sadrzi jedinicne testove (`unittest`) i doctestove. Testovi ne ucitavaju
 neuronsku mrezu niti pristupaju internetu (koriste se lazni/mock objekti), pa se
 izvode brzo.
 
-> 🧪 **Brzo i bezbolno:** svih 34 testova prode za otprilike sekundu — bez
-> interneta i bez preuzimanja modela (~500 MB). Samo pokreni naredbu ispod.
-
 ```powershell
 # Svi testovi (unit testovi + doctestovi)
 python -m unittest discover -s tests -t . -v
