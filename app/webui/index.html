@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medical Term Analysis</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="wrap">
+      <h1>Medical Term Analysis</h1>
+      <p>Detects diseases, symptoms, therapies, diagnostics and anatomy using a neural network (NER).</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <label class="label" for="input-text">Input text</label>
+      <textarea id="input-text" rows="6" spellcheck="false"></textarea>
+
+      <div class="toolbar">
+        <button id="btn-analyze" class="btn btn-primary" type="button">Analyze</button>
+        <button id="btn-clear" class="btn" type="button">Clear</button>
+        <span class="toolbar-gap">Export to</span>
+        <button id="btn-csv" class="btn" type="button" disabled>CSV</button>
+        <button id="btn-pdf" class="btn" type="button" disabled>PDF</button>
+      </div>
+
+      <p class="hint">
+        Term definitions are not shown here - they are included in the CSV and PDF exports.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 id="results-title">Found terms</h2>
+      <div class="table-scroll">
+        <table id="results">
+          <thead>
+            <tr>
+              <th>Term</th>
+              <th class="col-narrow">Category</th>
+              <th class="col-narrow">Confidence</th>
+            </tr>
+          </thead>
+          <tbody id="results-body">
+            <tr class="empty"><td colspan="3">No results yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="status-bar">
+        <span id="status">Ready.</span>
+        <span id="spinner" class="spinner" hidden></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span id="host-info">Loading service information...</span>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

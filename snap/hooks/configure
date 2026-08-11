@@ -1,0 +1,74 @@
+#!/bin/sh
+# Konfiguracijski hook: primjenjuje postavke zadane s "snap set".
+#
+#   snap set medical-lexicon port=9000     promjena porta web servisa
+#   snap set medical-lexicon host=127.0.0.1  vezanje samo na lokalno sucelje
+#   snap set medical-lexicon daemon=false  zaustavljanje web servisa
+set -eu
+
+SERVICE="$SNAP_INSTANCE_NAME.web"
+
+# --- port ------------------------------------------------------------------
+port="$(snapctl get port || true)"
+if [ -z "$port" ]; then
+  port=8080
+  snapctl set port="$port"
+fi
+
+case "$port" in
+  ''|*[!0-9]*)
+    echo "ERROR: 'port' mora biti cijeli broj (dobiveno: $port)" >&2
+    exit 1
+    ;;
+esac
+
+if [ "$port" -lt 1 ] || [ "$port" -gt 65535 ]; then
+  echo "ERROR: 'port' mora biti izmedu 1 i 65535 (dobiveno: $port)" >&2
+  exit 1
+fi
+
+# --- adresa ----------------------------------------------------------------
+host="$(snapctl get host || true)"
+if [ -z "$host" ]; then
+  snapctl set host=0.0.0.0
+fi
+
+# --- rad bez interneta ------------------------------------------------------
+offline="$(snapctl get offline || true)"
+if [ -z "$offline" ]; then
+  snapctl set offline=false
+  offline=false
+fi
+
+case "$offline" in
+  true|false) ;;
+  *)
+    echo "ERROR: 'offline' mora biti true ili false (dobiveno: $offline)" >&2
+    exit 1
+    ;;
+esac
+
+# --- ukljucivanje i iskljucivanje servisa -----------------------------------
+daemon="$(snapctl get daemon || true)"
+if [ -z "$daemon" ]; then
+  daemon=true
+  snapctl set daemon=true
+fi
+
+case "$daemon" in
+  true)
+    if snapctl services "$SERVICE" | grep -q inactive; then
+      snapctl start --enable "$SERVICE" 2>&1 || true
+    else
+      # Ponovno pokretanje primjenjuje novi port ili adresu.
+      snapctl restart "$SERVICE" 2>&1 || true
+    fi
+    ;;
+  false)
+    snapctl stop --disable "$SERVICE" 2>&1 || true
+    ;;
+  *)
+    echo "ERROR: 'daemon' mora biti true ili false (dobiveno: $daemon)" >&2
+    exit 1
+    ;;
+esac

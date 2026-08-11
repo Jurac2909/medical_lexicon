@@ -1,0 +1,195 @@
+:root {
+  --accent: #2c6e91;
+  --accent-dark: #1f5170;
+  --bg: #f4f6f8;
+  --border: #cfd8df;
+  --muted: #6b7a86;
+  --disease: #fde2e2;
+  --symptom: #fff1d6;
+  --therapy: #e3f6e8;
+  --diagnostics: #ece4f6;
+  --anatomy: #e2eefb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #1c2b36;
+  font: 15px/1.5 "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background: var(--accent);
+  color: #fff;
+  padding: 18px 0;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header p {
+  margin: 4px 0 0;
+  color: #d6e6f0;
+  font-size: 14px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font: inherit;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.toolbar-gap {
+  margin-left: 16px;
+  color: var(--muted);
+}
+
+.btn {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) { background: #eef5f9; }
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-primary:hover:not(:disabled) { background: var(--accent-dark); }
+
+.hint {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.table-scroll { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e6ebef;
+}
+
+th {
+  background: #f7f9fb;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+.col-narrow { width: 140px; }
+
+td.center, th.col-narrow { text-align: left; }
+
+tr.empty td {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.badge-disease { background: var(--disease); }
+.badge-symptom { background: var(--symptom); }
+.badge-therapy { background: var(--therapy); }
+.badge-diagnostics { background: var(--diagnostics); }
+.badge-anatomy { background: var(--anatomy); }
+
+.status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  color: var(--accent-dark);
+  font-size: 14px;
+  min-height: 22px;
+}
+
+.status-bar.error { color: #a12b2b; }
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.footer {
+  padding-bottom: 24px;
+  color: var(--muted);
+  font-size: 13px;
+}

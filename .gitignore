@@ -1,2 +1,18 @@
 __pycache__/
 .claude/
+.venv/
+venv/
+
+# Snapcraft
+parts/
+prime/
+stage/
+*.snap
+*.model
+
+# Ubuntu Core
+*.img
+
+# Izlazi aplikacije i predmemorija modela
+exports/
+hf-cache/

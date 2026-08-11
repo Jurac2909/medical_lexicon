@@ -1,0 +1,28 @@
+.git
+.gitignore
+.claude/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Snap i Ubuntu Core artefakti nisu dio Docker slike
+snap/
+ubuntu-core/
+parts/
+prime/
+stage/
+*.snap
+
+# Izlazi i lokalni podaci
+exports/
+log.txt
+hf-cache/
+*.csv
+*.pdf
+
+# Dokumentacija (slika se gradi bez nje)
+docs/
+*.md

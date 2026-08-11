@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Medical Term Analysis
+GenericName=Medical NER analyzer
+Comment=Detects diseases, symptoms, therapies, diagnostics and anatomy in text
+Exec=medical-lexicon
+Icon=${SNAP}/meta/gui/medical-lexicon.svg
+Terminal=false
+Categories=Science;Education;Utility;
+Keywords=medical;NER;neural;network;analysis;

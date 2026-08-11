@@ -3,22 +3,31 @@ from __future__ import annotations
 import functools
 import inspect
 import logging
+import sys
 import traceback
-from pathlib import Path
 
-LOG_FILE = Path(__file__).resolve().parent.parent / "log.txt"
+from .paths import data_dir
+
+LOG_FILE = data_dir() / "log.txt"
 
 _logger = logging.getLogger("medical_ner")
 if not _logger.handlers:
     _logger.setLevel(logging.DEBUG)
-    _file_handler = logging.FileHandler(LOG_FILE, encoding="utf-8")
-    _file_handler.setLevel(logging.DEBUG)
     _formatter = logging.Formatter(
         fmt="%(asctime)s | %(levelname)-8s | %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
     )
-    _file_handler.setFormatter(_formatter)
-    _logger.addHandler(_file_handler)
+    try:
+        _handler: logging.Handler = logging.FileHandler(
+            LOG_FILE, encoding="utf-8"
+        )
+    except OSError:
+        # Read-only location (snap, container): log to stderr instead, which
+        # is what journalctl and 'docker logs' collect anyway.
+        _handler = logging.StreamHandler(sys.stderr)
+    _handler.setLevel(logging.DEBUG)
+    _handler.setFormatter(_formatter)
+    _logger.addHandler(_handler)
 
 
 def get_logger() -> logging.Logger:

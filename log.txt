@@ -66,3 +66,1569 @@
 2026-06-10 11:06:11 | INFO     | Found 0 medical terms.
 2026-06-10 11:06:11 | INFO     | Found 1 medical terms.
 2026-06-10 11:06:11 | INFO     | Found 3 medical terms.
+2026-08-11 15:28:34 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp7ojy2njd\out.csv (2 terms).
+2026-08-11 15:28:34 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp9i0j9ino\out.csv (2 terms).
+2026-08-11 15:28:34 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp1xkiwutn\ret.csv (2 terms).
+2026-08-11 15:28:35 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmpsi9_56od\out.pdf (2 terms).
+2026-08-11 15:28:35 | INFO     | No Wikipedia article for 'stroke' (HTTP 403).
+2026-08-11 15:28:35 | INFO     | No Wikipedia article for 'zzz'.
+2026-08-11 15:28:35 | INFO     | Found 6 medical terms.
+2026-08-11 15:28:35 | INFO     | Found 1 medical terms.
+2026-08-11 15:28:35 | INFO     | Found 0 medical terms.
+2026-08-11 15:28:35 | INFO     | Found 0 medical terms.
+2026-08-11 15:28:35 | INFO     | Found 1 medical terms.
+2026-08-11 15:28:35 | INFO     | Found 3 medical terms.
+2026-08-11 15:28:35 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:28:35 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:28:35 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 146, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:28:35 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:28:35 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 214, in _read_json
+    payload = await request.json()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aiohttp\web_request.py", line 695, in json
+    return loads(body)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 142, in handle_analyze
+    payload = await _read_json(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 216, in _read_json
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:28:35 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:28:35 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 146, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:28:35 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:28:35 | ERROR    | Exception in function 'handle_analyze': Content Too Large
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPRequestEntityTooLarge(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPRequestEntityTooLarge: Content Too Large
+
+2026-08-11 15:28:35 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:28:35 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:28:35 | ERROR    | Exception in function 'AnalysisService.analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 78, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 15:28:35 | ERROR    | Exception in function 'handle_analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 158, in handle_analyze
+    terms = await service.analyze(text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 78, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 15:28:35 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:28:35 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpfl3ir6ki\exports\medical_terms_20260811_152835.csv (2 terms).
+2026-08-11 15:28:35 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:28:36 | ERROR    | Exception in function 'handle_export': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 183, in handle_export
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:28:36 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:28:36 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmpfk2az59j\exports\medical_terms_20260811_152836.pdf (2 terms).
+2026-08-11 15:28:36 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:28:36 | ERROR    | Exception in function 'handle_export': Not Found
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 175, in handle_export
+    raise web.HTTPNotFound(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+
+2026-08-11 15:28:36 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:28:36 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:28:36 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:28:36 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:29 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpi0gypwx0\out.csv (2 terms).
+2026-08-11 15:30:29 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp47jwvbwm\out.csv (2 terms).
+2026-08-11 15:30:29 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpfyz6ro9x\ret.csv (2 terms).
+2026-08-11 15:30:29 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmpxt8pxl6f\out.pdf (2 terms).
+2026-08-11 15:30:29 | INFO     | No Wikipedia article for 'stroke' (HTTP 403).
+2026-08-11 15:30:30 | INFO     | No Wikipedia article for 'zzz'.
+2026-08-11 15:30:30 | INFO     | Found 6 medical terms.
+2026-08-11 15:30:30 | INFO     | Found 1 medical terms.
+2026-08-11 15:30:30 | INFO     | Found 0 medical terms.
+2026-08-11 15:30:30 | INFO     | Found 0 medical terms.
+2026-08-11 15:30:30 | INFO     | Found 1 medical terms.
+2026-08-11 15:30:30 | INFO     | Found 3 medical terms.
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:30 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 150, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:30 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 218, in _read_json
+    payload = await request.json()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aiohttp\web_request.py", line 695, in json
+    return loads(body)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 146, in handle_analyze
+    payload = await _read_json(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 220, in _read_json
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:30 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 150, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:30 | ERROR    | Exception in function 'handle_analyze': Content Too Large
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 155, in handle_analyze
+    raise web.HTTPRequestEntityTooLarge(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPRequestEntityTooLarge: Content Too Large
+
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:30 | ERROR    | Exception in function 'AnalysisService.analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 82, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 15:30:30 | ERROR    | Exception in function 'handle_analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 162, in handle_analyze
+    terms = await service.analyze(text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 82, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:30 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp0scm3i8a\exports\medical_terms_20260811_153030.csv (2 terms).
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:30 | ERROR    | Exception in function 'handle_export': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 187, in handle_export
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:30 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmp874e4a2k\exports\medical_terms_20260811_153030.pdf (2 terms).
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:30 | ERROR    | Exception in function 'handle_export': Not Found
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 179, in handle_export
+    raise web.HTTPNotFound(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:30:30 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp0_4pmzh3\out.csv (2 terms).
+2026-08-11 15:51:19 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp5h7djv6e\out.csv (2 terms).
+2026-08-11 15:51:19 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmps41f6nzk\ret.csv (2 terms).
+2026-08-11 15:51:19 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmptuzmi8tx\out.pdf (2 terms).
+2026-08-11 15:51:19 | INFO     | No Wikipedia article for 'stroke' (HTTP 403).
+2026-08-11 15:51:19 | INFO     | No Wikipedia article for 'zzz'.
+2026-08-11 15:51:19 | INFO     | Found 6 medical terms.
+2026-08-11 15:51:19 | INFO     | Found 1 medical terms.
+2026-08-11 15:51:19 | INFO     | Found 0 medical terms.
+2026-08-11 15:51:19 | INFO     | Found 0 medical terms.
+2026-08-11 15:51:19 | INFO     | Found 1 medical terms.
+2026-08-11 15:51:19 | INFO     | Found 3 medical terms.
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 150, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 218, in _read_json
+    payload = await request.json()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aiohttp\web_request.py", line 695, in json
+    return loads(body)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 146, in handle_analyze
+    payload = await _read_json(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 220, in _read_json
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 150, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | ERROR    | Exception in function 'handle_analyze': Content Too Large
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 155, in handle_analyze
+    raise web.HTTPRequestEntityTooLarge(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPRequestEntityTooLarge: Content Too Large
+
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | ERROR    | Exception in function 'AnalysisService.analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 82, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 15:51:19 | ERROR    | Exception in function 'handle_analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 162, in handle_analyze
+    terms = await service.analyze(text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 82, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp6r4gwmd9\exports\medical_terms_20260811_155119.csv (2 terms).
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | ERROR    | Exception in function 'handle_export': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 187, in handle_export
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmph9jq25u4\exports\medical_terms_20260811_155119.pdf (2 terms).
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | ERROR    | Exception in function 'handle_export': Not Found
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 179, in handle_export
+    raise web.HTTPNotFound(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:51:19 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:46 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpd2nysy91\out.csv (2 terms).
+2026-08-11 15:52:46 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp67ial7lx\out.csv (2 terms).
+2026-08-11 15:52:46 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpan78zmsx\ret.csv (2 terms).
+2026-08-11 15:52:46 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmpq7fpc0k3\out.pdf (2 terms).
+2026-08-11 15:52:46 | INFO     | No Wikipedia article for 'stroke' (HTTP 403).
+2026-08-11 15:52:46 | INFO     | No Wikipedia article for 'zzz'.
+2026-08-11 15:52:46 | INFO     | Found 6 medical terms.
+2026-08-11 15:52:46 | INFO     | Found 1 medical terms.
+2026-08-11 15:52:46 | INFO     | Found 0 medical terms.
+2026-08-11 15:52:46 | INFO     | Found 0 medical terms.
+2026-08-11 15:52:46 | INFO     | Found 1 medical terms.
+2026-08-11 15:52:46 | INFO     | Found 3 medical terms.
+2026-08-11 15:52:46 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:46 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:47 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:52:47 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:47 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 219, in _read_json
+    payload = await request.json()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aiohttp\web_request.py", line 695, in json
+    return loads(body)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 147, in handle_analyze
+    payload = await _read_json(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 221, in _read_json
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:52:47 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:47 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:52:47 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:47 | ERROR    | Exception in function 'handle_analyze': Content Too Large
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 156, in handle_analyze
+    raise web.HTTPRequestEntityTooLarge(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPRequestEntityTooLarge: Content Too Large
+
+2026-08-11 15:52:47 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:47 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:47 | ERROR    | Exception in function 'AnalysisService.analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 83, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 15:52:47 | ERROR    | Exception in function 'handle_analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 163, in handle_analyze
+    terms = await service.analyze(text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 83, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 15:52:47 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:47 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpk2m9skha\exports\medical_terms_20260811_155247.csv (2 terms).
+2026-08-11 15:52:47 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:47 | ERROR    | Exception in function 'handle_export': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 188, in handle_export
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 15:52:47 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:47 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmprd1rjd18\exports\medical_terms_20260811_155247.pdf (2 terms).
+2026-08-11 15:52:47 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:47 | ERROR    | Exception in function 'handle_export': Not Found
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 180, in handle_export
+    raise web.HTTPNotFound(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+
+2026-08-11 15:52:47 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:47 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:47 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 15:52:47 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:26 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpu32cyhin\out.csv (2 terms).
+2026-08-11 16:44:26 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpl2gaw9_u\out.csv (2 terms).
+2026-08-11 16:44:26 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpqn54sthg\ret.csv (2 terms).
+2026-08-11 16:44:26 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmpsmjiwt97\out.pdf (2 terms).
+2026-08-11 16:44:26 | INFO     | No Wikipedia article for 'stroke' (HTTP 403).
+2026-08-11 16:44:26 | INFO     | No Wikipedia article for 'zzz'.
+2026-08-11 16:44:26 | INFO     | Found 6 medical terms.
+2026-08-11 16:44:26 | INFO     | Found 1 medical terms.
+2026-08-11 16:44:26 | INFO     | Found 0 medical terms.
+2026-08-11 16:44:26 | INFO     | Found 0 medical terms.
+2026-08-11 16:44:26 | INFO     | Found 1 medical terms.
+2026-08-11 16:44:26 | INFO     | Found 3 medical terms.
+2026-08-11 16:44:26 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:26 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:26 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 16:44:26 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:26 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 219, in _read_json
+    payload = await request.json()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aiohttp\web_request.py", line 695, in json
+    return loads(body)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 147, in handle_analyze
+    payload = await _read_json(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 221, in _read_json
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 16:44:26 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:26 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 16:44:26 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:26 | ERROR    | Exception in function 'handle_analyze': Content Too Large
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 156, in handle_analyze
+    raise web.HTTPRequestEntityTooLarge(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPRequestEntityTooLarge: Content Too Large
+
+2026-08-11 16:44:26 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:26 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:26 | ERROR    | Exception in function 'AnalysisService.analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 83, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 16:44:26 | ERROR    | Exception in function 'handle_analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 163, in handle_analyze
+    terms = await service.analyze(text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 83, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 16:44:27 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:27 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpgqmn5fru\exports\medical_terms_20260811_164427.csv (2 terms).
+2026-08-11 16:44:27 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:27 | ERROR    | Exception in function 'handle_export': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 188, in handle_export
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 16:44:27 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:27 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmpuejwqhcq\exports\medical_terms_20260811_164427.pdf (2 terms).
+2026-08-11 16:44:27 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:27 | ERROR    | Exception in function 'handle_export': Not Found
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 180, in handle_export
+    raise web.HTTPNotFound(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+
+2026-08-11 16:44:27 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:27 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:27 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:44:27 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpb0cmtxxo\out.csv (2 terms).
+2026-08-11 16:56:20 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpo5r6wwx_\out.csv (2 terms).
+2026-08-11 16:56:20 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp0pbqz1to\ret.csv (2 terms).
+2026-08-11 16:56:20 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmp_yg_rxb4\out.pdf (2 terms).
+2026-08-11 16:56:20 | INFO     | No Wikipedia article for 'stroke' (HTTP 403).
+2026-08-11 16:56:20 | INFO     | No Wikipedia article for 'zzz'.
+2026-08-11 16:56:20 | INFO     | Found 6 medical terms.
+2026-08-11 16:56:20 | INFO     | Found 1 medical terms.
+2026-08-11 16:56:20 | INFO     | Found 0 medical terms.
+2026-08-11 16:56:20 | INFO     | Found 0 medical terms.
+2026-08-11 16:56:20 | INFO     | Found 1 medical terms.
+2026-08-11 16:56:20 | INFO     | Found 3 medical terms.
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 219, in _read_json
+    payload = await request.json()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aiohttp\web_request.py", line 695, in json
+    return loads(body)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 147, in handle_analyze
+    payload = await _read_json(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 221, in _read_json
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | ERROR    | Exception in function 'handle_analyze': Content Too Large
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 156, in handle_analyze
+    raise web.HTTPRequestEntityTooLarge(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPRequestEntityTooLarge: Content Too Large
+
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | ERROR    | Exception in function 'AnalysisService.analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 83, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 16:56:20 | ERROR    | Exception in function 'handle_analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 163, in handle_analyze
+    terms = await service.analyze(text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 83, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmphtwt8rga\exports\medical_terms_20260811_165620.csv (2 terms).
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | ERROR    | Exception in function 'handle_export': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 188, in handle_export
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmp6pjx5tc3\exports\medical_terms_20260811_165620.pdf (2 terms).
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | ERROR    | Exception in function 'handle_export': Not Found
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 180, in handle_export
+    raise web.HTTPNotFound(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 16:56:20 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp1kpckel7\out.csv (2 terms).
+2026-08-11 17:21:28 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpkhiw6y0a\out.csv (2 terms).
+2026-08-11 17:21:28 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp75olayn1\ret.csv (2 terms).
+2026-08-11 17:21:28 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmphjpl7029\out.pdf (2 terms).
+2026-08-11 17:21:28 | INFO     | No Wikipedia article for 'stroke' (HTTP 403).
+2026-08-11 17:21:28 | INFO     | No Wikipedia article for 'zzz'.
+2026-08-11 17:21:28 | INFO     | Found 6 medical terms.
+2026-08-11 17:21:28 | INFO     | Found 1 medical terms.
+2026-08-11 17:21:28 | INFO     | Found 0 medical terms.
+2026-08-11 17:21:28 | INFO     | Found 0 medical terms.
+2026-08-11 17:21:28 | INFO     | Found 1 medical terms.
+2026-08-11 17:21:28 | INFO     | Found 3 medical terms.
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 219, in _read_json
+    payload = await request.json()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aiohttp\web_request.py", line 695, in json
+    return loads(body)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 147, in handle_analyze
+    payload = await _read_json(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 221, in _read_json
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | ERROR    | Exception in function 'handle_analyze': Content Too Large
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 156, in handle_analyze
+    raise web.HTTPRequestEntityTooLarge(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPRequestEntityTooLarge: Content Too Large
+
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | ERROR    | Exception in function 'AnalysisService.analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 83, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 17:21:28 | ERROR    | Exception in function 'handle_analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 163, in handle_analyze
+    terms = await service.analyze(text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 83, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp2qltmpyw\exports\medical_terms_20260811_172128.csv (2 terms).
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | ERROR    | Exception in function 'handle_export': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 188, in handle_export
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmpxm9ydzvk\exports\medical_terms_20260811_172128.pdf (2 terms).
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | ERROR    | Exception in function 'handle_export': Not Found
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 180, in handle_export
+    raise web.HTTPNotFound(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:21:28 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp3d8dxykb\out.csv (2 terms).
+2026-08-11 17:26:38 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp0j5j1xyw\out.csv (2 terms).
+2026-08-11 17:26:38 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpiioaqb4u\ret.csv (2 terms).
+2026-08-11 17:26:38 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmpe_k6tbr0\out.pdf (2 terms).
+2026-08-11 17:26:38 | INFO     | No Wikipedia article for 'stroke' (HTTP 403).
+2026-08-11 17:26:38 | INFO     | No Wikipedia article for 'zzz'.
+2026-08-11 17:26:38 | INFO     | Found 6 medical terms.
+2026-08-11 17:26:38 | INFO     | Found 1 medical terms.
+2026-08-11 17:26:38 | INFO     | Found 0 medical terms.
+2026-08-11 17:26:38 | INFO     | Found 0 medical terms.
+2026-08-11 17:26:38 | INFO     | Found 1 medical terms.
+2026-08-11 17:26:38 | INFO     | Found 3 medical terms.
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 219, in _read_json
+    payload = await request.json()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aiohttp\web_request.py", line 695, in json
+    return loads(body)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 147, in handle_analyze
+    payload = await _read_json(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 221, in _read_json
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | ERROR    | Exception in function 'handle_analyze': Content Too Large
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 156, in handle_analyze
+    raise web.HTTPRequestEntityTooLarge(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPRequestEntityTooLarge: Content Too Large
+
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | ERROR    | Exception in function 'AnalysisService.analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 83, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 17:26:38 | ERROR    | Exception in function 'handle_analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 163, in handle_analyze
+    terms = await service.analyze(text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 83, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpffp0_aou\exports\medical_terms_20260811_172638.csv (2 terms).
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | ERROR    | Exception in function 'handle_export': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 188, in handle_export
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmpbr4zta5e\exports\medical_terms_20260811_172638.pdf (2 terms).
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | ERROR    | Exception in function 'handle_export': Not Found
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 180, in handle_export
+    raise web.HTTPNotFound(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:26:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:37 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpzf36pgpj\out.csv (2 terms).
+2026-08-11 17:56:37 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpnvjk2ok4\out.csv (2 terms).
+2026-08-11 17:56:37 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp4ugiuom9\ret.csv (2 terms).
+2026-08-11 17:56:37 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmp5mo80xtl\out.pdf (2 terms).
+2026-08-11 17:56:37 | INFO     | No Wikipedia article for 'stroke' (HTTP 403).
+2026-08-11 17:56:37 | INFO     | No Wikipedia article for 'zzz'.
+2026-08-11 17:56:37 | INFO     | Found 6 medical terms.
+2026-08-11 17:56:37 | INFO     | Found 1 medical terms.
+2026-08-11 17:56:37 | INFO     | Found 0 medical terms.
+2026-08-11 17:56:37 | INFO     | Found 0 medical terms.
+2026-08-11 17:56:37 | INFO     | Found 1 medical terms.
+2026-08-11 17:56:37 | INFO     | Found 3 medical terms.
+2026-08-11 17:56:37 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:37 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:37 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 17:56:37 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:37 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 219, in _read_json
+    payload = await request.json()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\.venv\Lib\site-packages\aiohttp\web_request.py", line 721, in json
+    return loads(body)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 147, in handle_analyze
+    payload = await _read_json(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 221, in _read_json
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 17:56:37 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:37 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 17:56:37 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:37 | ERROR    | Exception in function 'handle_analyze': Content Too Large
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 156, in handle_analyze
+    raise web.HTTPRequestEntityTooLarge(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPRequestEntityTooLarge: Content Too Large
+
+2026-08-11 17:56:37 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:37 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:37 | ERROR    | Exception in function 'AnalysisService.analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 83, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 17:56:37 | ERROR    | Exception in function 'handle_analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 163, in handle_analyze
+    terms = await service.analyze(text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 83, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 17:56:37 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:37 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpvbhgxhw3\exports\medical_terms_20260811_175637.csv (2 terms).
+2026-08-11 17:56:37 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:37 | ERROR    | Exception in function 'handle_export': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 188, in handle_export
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 17:56:37 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:37 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmp7c6qdgvv\exports\medical_terms_20260811_175637.pdf (2 terms).
+2026-08-11 17:56:37 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:38 | ERROR    | Exception in function 'handle_export': Not Found
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 180, in handle_export
+    raise web.HTTPNotFound(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+
+2026-08-11 17:56:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:38 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:56:44 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 17:57:27 | INFO     | Loading model 'Clinical-AI-Apollo/Medical-NER'...
+2026-08-11 17:57:30 | INFO     | Model loaded successfully.
+2026-08-11 17:57:30 | INFO     | Found 11 medical terms.
+2026-08-11 17:57:31 | INFO     | No Wikipedia article for 'blood pressure monitoring'.
+2026-08-11 17:57:31 | INFO     | Fetched descriptions for 11 terms.
+2026-08-11 18:06:15 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpk7h7nm_4\out.csv (2 terms).
+2026-08-11 18:06:15 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmpxtirv6jg\out.csv (2 terms).
+2026-08-11 18:06:15 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp7i8f3szd\ret.csv (2 terms).
+2026-08-11 18:06:16 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmp156m8r87\out.pdf (2 terms).
+2026-08-11 18:06:16 | INFO     | No Wikipedia article for 'stroke' (HTTP 403).
+2026-08-11 18:06:16 | INFO     | No Wikipedia article for 'zzz'.
+2026-08-11 18:06:16 | INFO     | Found 6 medical terms.
+2026-08-11 18:06:16 | INFO     | Found 1 medical terms.
+2026-08-11 18:06:16 | INFO     | Found 0 medical terms.
+2026-08-11 18:06:16 | INFO     | Found 0 medical terms.
+2026-08-11 18:06:16 | INFO     | Found 1 medical terms.
+2026-08-11 18:06:16 | INFO     | Found 3 medical terms.
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 18:06:16 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 18:06:16 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 219, in _read_json
+    payload = await request.json()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\aiohttp\web_request.py", line 695, in json
+    return loads(body)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 147, in handle_analyze
+    payload = await _read_json(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 221, in _read_json
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 18:06:16 | ERROR    | Exception in function 'handle_analyze': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 151, in handle_analyze
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 18:06:16 | ERROR    | Exception in function 'handle_analyze': Content Too Large
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 156, in handle_analyze
+    raise web.HTTPRequestEntityTooLarge(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPRequestEntityTooLarge: Content Too Large
+
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 18:06:16 | ERROR    | Exception in function 'AnalysisService.analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 83, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 18:06:16 | ERROR    | Exception in function 'handle_analyze': model unavailable
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 163, in handle_analyze
+    terms = await service.analyze(text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 83, in analyze
+    terms = await asyncio.to_thread(self.analyzer.analyze, text)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\asyncio\threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\X\Desktop\NTP_new\tests\test_web.py", line 27, in analyze
+    raise self._error
+RuntimeError: model unavailable
+
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 18:06:16 | INFO     | CSV exported: C:\Users\X\AppData\Local\Temp\tmp21sops9d\exports\medical_terms_20260811_180616.csv (2 terms).
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 18:06:16 | ERROR    | Exception in function 'handle_export': Bad Request
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 188, in handle_export
+    raise web.HTTPBadRequest(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPBadRequest: Bad Request
+
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 18:06:16 | INFO     | PDF exported: C:\Users\X\AppData\Local\Temp\tmpg2og4jx0\exports\medical_terms_20260811_180616.pdf (2 terms).
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 18:06:16 | ERROR    | Exception in function 'handle_export': Not Found
+Traceback (most recent call last):
+  File "C:\Users\X\Desktop\NTP_new\app\logger.py", line 54, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\X\Desktop\NTP_new\app\web.py", line 180, in handle_export
+    raise web.HTTPNotFound(
+    ...<2 lines>...
+    )
+aiohttp.web_exceptions.HTTPNotFound: Not Found
+
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).
+2026-08-11 18:06:16 | INFO     | Web service started (version 1.0.0, Windows AMD64).

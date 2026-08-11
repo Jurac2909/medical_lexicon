@@ -1,0 +1,78 @@
+{
+    "type": "model",
+    "series": "16",
+    "model": "medical-lexicon-kiosk-pi-arm64",
+    "architecture": "arm64",
+    "authority-id": "<vas developer account id>",
+    "brand-id": "<vas brand id>",
+    "timestamp": "2026-08-11T10:00:00+00:00",
+    "base": "core24",
+    "grade": "dangerous",
+    "snaps": [
+        {
+            "name": "pi",
+            "type": "gadget",
+            "default-channel": "24/stable",
+            "id": "YbGa9O3dAXl88YLI6Y1bGG74pwBxZyKg"
+        },
+        {
+            "name": "pi-kernel",
+            "type": "kernel",
+            "default-channel": "24/stable",
+            "id": "jeIuP6tfFrvAdic8DMWqHmoaoukAPNbJ"
+        },
+        {
+            "name": "core24",
+            "type": "base",
+            "default-channel": "latest/stable",
+            "id": "dwTAh7MZZ01zyriOZErqd1JynQLiOGvM"
+        },
+        {
+            "name": "snapd",
+            "type": "snapd",
+            "default-channel": "latest/stable",
+            "id": "PMrrV4ml8uWuEUDBT8dSGnKUYbevVhc4"
+        },
+        {
+            "name": "console-conf",
+            "type": "app",
+            "default-channel": "24/stable",
+            "id": "ASctKBEHzVt3f1pbZLoekCvcigRjtuqw"
+        },
+        {
+            "name": "mesa-2404",
+            "type": "app",
+            "default-channel": "latest/stable",
+            "id": "HyhSEBPv3vHsW6uOHkQR384NgI7S6zpj"
+        },
+        {
+            "name": "ubuntu-frame",
+            "type": "app",
+            "default-channel": "24/stable",
+            "id": "BPZbvWzvoMTrpec4goCXlckLe2IhfthK"
+        },
+        {
+            "name": "core22",
+            "type": "base",
+            "default-channel": "latest/stable",
+            "id": "amcUKQILKXHHTlmSa7NMdnXSx02dNeeT"
+        },
+        {
+            "name": "mesa-core22",
+            "type": "app",
+            "default-channel": "latest/stable",
+            "id": "UijXdFgvIKp9ZZ6P4ijPAJHWZLtSKgWm"
+        },
+        {
+            "name": "wpe-webkit-mir-kiosk",
+            "type": "app",
+            "default-channel": "22/stable",
+            "id": "01sV9tv4UTUQTU3jYsAF1gJ5qv7ZqGls"
+        },
+        {
+            "name": "medical-lexicon",
+            "type": "app",
+            "file": "medical-lexicon_1.0.0_arm64.snap"
+        }
+    ]
+}

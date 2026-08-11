@@ -2,8 +2,8 @@
 transformers>=4.30.0
 torch>=2.0.0
 
-# Asynchronous data fetching
-aiohttp>=3.8.0
+# Asynchronous data fetching + headless web service (Docker, snap daemon)
+aiohttp>=3.9.0
 
 # PDF export
 reportlab>=4.0.0

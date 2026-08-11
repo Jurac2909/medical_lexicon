@@ -1,0 +1,105 @@
+name: medical-lexicon
+base: core24
+version: '1.0.0'
+summary: Analiza medicinskih pojmova neuronskom mrezom (NER)
+description: |
+  Aplikacija u tekstu prepoznaje medicinske strucne pojmove (bolesti,
+  simptome, terapije, dijagnostiku i anatomiju) pomocu transformer NER
+  modela, asinkrono dohvaca definicije s Wikipedije te rezultate izvozi
+  u CSV ili PDF.
+
+  Snap sadrzi tri nacina rada:
+
+    medical-lexicon        graficko sucelje (Tkinter)
+    medical-lexicon.cli    analiza u terminalu
+    medical-lexicon.web    web servis kao pozadinski daemon (port 8080)
+
+  Web servis je nacin rada koji se koristi na Ubuntu Core uredajima
+  (Raspberry Pi) jer ne zahtijeva graficki sustav.
+
+grade: devel
+confinement: strict
+
+# Snap se gradi na arhitekturi za koju je namijenjen. Krizna izgradnja
+# (build-on: amd64, build-for: arm64) ovdje nije moguca jer pip za torch
+# preuzima binarne wheel pakete vezane uz arhitekturu gradnje.
+platforms:
+  amd64:
+    build-on: [amd64]
+    build-for: [amd64]
+  arm64:
+    build-on: [arm64]
+    build-for: [arm64]
+
+parts:
+  medical-lexicon:
+    plugin: python
+    source: .
+    python-requirements:
+      - requirements.txt
+    stage-packages:
+      # tkinter za graficko sucelje (u snapu nije dostupan sistemski Python)
+      - python3-tk
+      - fonts-dejavu-core
+      # OpenMP runtime koji koristi torch
+      - libgomp1
+    override-build: |
+      craftctl default
+      # Python plugin instalira samo ovisnosti, pa se izvorni kod kopira rucno
+      install -d "$CRAFT_PART_INSTALL/app-src/app"
+      cp -r "$CRAFT_PART_SRC/app/." "$CRAFT_PART_INSTALL/app-src/app/"
+      install -Dm644 "$CRAFT_PART_SRC/main.py" \
+        "$CRAFT_PART_INSTALL/app-src/main.py"
+      find "$CRAFT_PART_INSTALL/app-src" -name '__pycache__' -type d \
+        -exec rm -rf {} +
+    prime:
+      # Torch u snap donosi i staticke biblioteke te testove koji nisu
+      # potrebni za izvodenje (usteda vise stotina MB).
+      - -lib/python*/site-packages/torch/test
+      - -lib/python*/site-packages/torch/include
+      - -lib/python*/site-packages/**/*.a
+      - -lib/python*/site-packages/**/__pycache__
+
+  launchers:
+    plugin: dump
+    source: snap/local
+    organize:
+      '*.sh': bin/
+    override-build: |
+      craftctl default
+      chmod 0755 "$CRAFT_PART_INSTALL"/*.sh
+
+apps:
+  # Graficko sucelje (Tkinter). Zahtijeva X11 ili Wayland sjednicu, pa se
+  # NE koristi na Ubuntu Coreu.
+  medical-lexicon:
+    command: bin/run-gui.sh
+    extensions: [gnome]
+    plugs:
+      - desktop
+      - desktop-legacy
+      - x11
+      - wayland
+      - home
+      - network
+
+  # Analiza u terminalu: medical-lexicon.cli "The patient has pneumonia."
+  cli:
+    command: bin/run-cli.sh
+    plugs:
+      - home
+      - network
+
+  # Web servis kao daemon: koristi se na posluzitelju i na Ubuntu Coreu.
+  # Port se mijenja s: snap set medical-lexicon port=8080
+  web:
+    command: bin/run-web.sh
+    daemon: simple
+    restart-condition: always
+    restart-delay: 5s
+    plugs:
+      - network
+      - network-bind
+    environment:
+      # Model se ucitava odmah pri pokretanju servisa, a ne pri prvom zahtjevu
+      MEDLEX_PRELOAD: "1"

@@ -1,0 +1,15 @@
+# Nadogradnja za Linux domacina (Raspberry Pi OS, Ubuntu Desktop).
+# Povezuje X11 uticnicu domacina kako bi se Tkinter prozor prikazao lokalno.
+#
+#   xhost +local:docker
+#   docker compose -f docker-compose.yml -f docker-compose.linux.yml \
+#     --profile gui up gui
+#
+# Na Windowsima se ova datoteka ne koristi (X11 ide preko VcXsrv-a i TCP-a).
+
+services:
+  gui:
+    environment:
+      DISPLAY: "${DISPLAY:-:0}"
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix

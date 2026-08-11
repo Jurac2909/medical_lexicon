@@ -1,0 +1,72 @@
+name: medical-lexicon
+
+services:
+  # Glavni servis: web sucelje i REST API na http://localhost:8080
+  web:
+    build:
+      context: .
+      target: web
+      args:
+        # true ugraduje model u sliku (veca slika, radi bez interneta)
+        PRELOAD_MODEL: "false"
+    image: medical-lexicon:web
+    container_name: medical-lexicon-web
+    ports:
+      - "8080:8080"
+    environment:
+      MEDLEX_PORT: "8080"
+      # Ucitaj model odmah pri pokretanju umjesto pri prvom zahtjevu
+      MEDLEX_PRELOAD: "1"
+    volumes:
+      # Model se preuzima jednom i ostaje u imenovanom volumenu
+      - model-cache:/data/hf-cache
+      # CSV i PDF izvozi vidljivi su na hostu
+      - ./exports:/data/exports
+    restart: unless-stopped
+
+  # Tkinter sucelje preko X11 servera na hostu:
+  #   docker compose --profile gui up gui
+  gui:
+    profiles: ["gui"]
+    build:
+      context: .
+      target: gui
+    image: medical-lexicon:gui
+    container_name: medical-lexicon-gui
+    environment:
+      # Windows (VcXsrv): host.docker.internal:0
+      # Linux: :0  (uz "xhost +local:docker")
+      DISPLAY: "${DISPLAY:-host.docker.internal:0}"
+    volumes:
+      - model-cache:/data/hf-cache
+      - ./exports:/data/exports
+      # Samo na Linuxu odkomentirati (na Windowsima ne postoji):
+      # - /tmp/.X11-unix:/tmp/.X11-unix
+
+  # Jednokratna analiza u terminalu:
+  #   docker compose run --rm cli --cli "The patient has pneumonia."
+  cli:
+    profiles: ["cli"]
+    build:
+      context: .
+      target: web
+    image: medical-lexicon:web
+    entrypoint: ["python", "main.py"]
+    command: ["--cli", "The patient has pneumonia and was given insulin therapy."]
+    volumes:
+      - model-cache:/data/hf-cache
+      - ./exports:/data/exports
+
+  # Jedinicni testovi unutar kontejnera:
+  #   docker compose --profile test run --rm test
+  test:
+    profiles: ["test"]
+    build:
+      context: .
+      target: web
+    image: medical-lexicon:web
+    entrypoint: ["python", "-m", "unittest"]
+    command: ["discover", "-s", "tests", "-t", ".", "-v"]
+
+volumes:
+  model-cache:

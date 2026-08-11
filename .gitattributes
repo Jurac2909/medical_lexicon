@@ -1,0 +1,11 @@
+# Datoteke koje se izvode na Linuxu (snap, Docker, Ubuntu Core) moraju
+# zadrzati LF zavrsetke redaka. S CRLF zavrsecima shell skripte javljaju
+# gresku "bad interpreter: /bin/sh^M".
+*.sh            text eol=lf
+snap/hooks/*    text eol=lf
+Dockerfile      text eol=lf
+.dockerignore   text eol=lf
+*.yaml          text eol=lf
+*.yml           text eol=lf
+*.py            text eol=lf
+*.json          text eol=lf
