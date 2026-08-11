@@ -165,12 +165,52 @@ snapcraft remote-build --launchpad-accept-public-upload
 Zahtijeva Launchpad racun. Izvorni kod se pritom javno objavljuje na
 Launchpadu, sto je za seminarski rad prihvatljivo.
 
-**3. arm64 virtualni stroj**
+> Ovaj nacin ovisi o dostupnosti Launchpada. Ako `git.launchpad.net` nije
+> dostupan, gradnja pada s porukom `Could not push 'HEAD'` i
+> `Failed to connect to git.launchpad.net port 443`. Stanje se provjerava na
+> <https://status.canonical.com/>, a dostupnost izravno s:
+>
+> ```bash
+> curl -sS -o /dev/null -m 10 -w "%{http_code}\n" https://git.launchpad.net/
+> ```
+>
+> Zbog te ovisnosti prvi nacin (gradnja na samom uredaju) je pouzdaniji izbor
+> kada uredaj postoji.
+
+Prije pokretanja treba iz projekta maknuti prethodno izgradene `.snap`
+datoteke, jer `remote-build` kopira cijeli direktorij i salje ga na
+posluzitelj:
+
+```bash
+rm -f ./*.snap
+rm -rf ~/.cache/snapcraft/remote-build
+```
+
+**3. GitHub Actions na arm64 posluzitelju (ne ovisi o Launchpadu)**
+
+Repozitorij sadrzi radni tijek
+[`.github/workflows/build-snap.yml`](../.github/workflows/build-snap.yml) koji
+paket gradi na GitHubovom `ubuntu-24.04-arm` posluzitelju. Za javne
+repozitorije ti su posluzitelji besplatni.
+
+Pokretanje: kartica **Actions** > **Build snap** > **Run workflow**. Nakon
+gradnje se pri dnu stranice izvodenja preuzima artefakt
+`medical-lexicon-arm64` (zip s `.snap` datotekom).
+
+Ovo je najpouzdaniji nacin kada nema pristupa arm64 sklopovlju, a Launchpad
+nije dostupan.
+
+**4. arm64 virtualni stroj**
 
 Na racunalima s ARM procesorom (Apple Silicon) gradnja radi izravno u
 Multipass ili UTM virtualnom stroju s Ubuntu 24.04.
 
-Rezultat je u sva tri slucaja `medical-lexicon_1.0.0_arm64.snap`.
+Rezultat je u svim slucajevima `medical-lexicon_1.0.0_arm64.snap`.
+
+> Ubuntu Core na uredaju **ne moze graditi snapove**: `snapcraft` je snap s
+> klasicnim ogranicenjem (`classic`), a Ubuntu Core takve snapove ne dopusta.
+> Gradnja na samom uredaju moguca je samo ako na njemu radi Ubuntu Server ili
+> Raspberry Pi OS.
 
 ## Kako je paket slozen
 

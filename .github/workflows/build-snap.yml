@@ -1,0 +1,66 @@
+name: Build snap
+
+# Gradnja snap paketa za amd64 i arm64. arm64 se gradi na GitHub arm64
+# posluzitelju (besplatan za javne repozitorije), jer se paket s torchem ne
+# moze krizno graditi s amd64 racunala, a Ubuntu Core na uredaju ne moze
+# graditi snapove.
+#
+# Pokretanje: kartica Actions -> "Build snap" -> "Run workflow".
+# Rezultat: artefakt s .snap datotekom, na dnu stranice izvodenja.
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    name: ${{ matrix.arch }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 120
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: arm64
+            runner: ubuntu-24.04-arm
+          - arch: amd64
+            runner: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Gradnja s torchem trazi puno prostora, pa se uklanja sve sto
+      # posluzitelj ima predinstalirano, a nije potrebno.
+      - name: Oslobadanje prostora na disku
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc \
+                      /usr/local/share/boost "$AGENT_TOOLSDIRECTORY" || true
+          df -h /
+
+      - name: Instalacija snapcrafta
+        run: sudo snap install snapcraft --classic
+
+      # --destructive-mode gradi izravno na posluzitelju umjesto u LXD
+      # kontejneru. Posluzitelj je Ubuntu 24.04, sto je ista baza koju snap
+      # koristi (core24), pa je rezultat jednak, a gradnja brza i s manje
+      # zauzeca diska.
+      - name: Gradnja snapa
+        run: sudo snapcraft pack --destructive-mode --verbosity=verbose
+
+      - name: Prostor nakon gradnje
+        if: always()
+        run: df -h /
+
+      - name: Naziv izgradene datoteke
+        id: snap
+        run: echo "file=$(ls -1 ./*.snap | head -1)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: medical-lexicon-${{ matrix.arch }}
+          path: ${{ steps.snap.outputs.file }}
+          retention-days: 30
+          compression-level: 0
