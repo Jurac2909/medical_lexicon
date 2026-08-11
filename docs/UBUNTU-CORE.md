@@ -73,9 +73,10 @@ sudo snap install /home/ubuntu/medical-lexicon_1.0.0_amd64.snap --dangerous
 snap services medical-lexicon
 sudo snap logs medical-lexicon -f
 sudo snap set medical-lexicon port=8080
-curl http://localhost:8080/api/info
+snap get medical-lexicon
 ```
 
+Ubuntu Core nema `curl`, pa se odgovor servisa provjerava iz preglednika.
 Web sucelje s Windowsa se otvara preko adrese virtualnog stroja:
 
 ```powershell
@@ -173,10 +174,20 @@ microSD karticu.
 snap services medical-lexicon               # servis mora biti active
 sudo snap logs medical-lexicon -f           # pracenje pokretanja
 snap get medical-lexicon                    # port, host, daemon
-
-curl http://localhost:8080/healthz
-curl http://localhost:8080/api/info         # "machine": "aarch64"
 ```
+
+> Ubuntu Core ima namjerno minimalan sustav i **ne sadrzi `curl` ni `wget`**.
+> Stanje servisa provjerava se gornjim `snap` naredbama, a odgovor servisa
+> najlakse iz preglednika na drugom racunalu. Ako je provjera potrebna na
+> samom uredaju, moguce je bez dodatnih alata:
+>
+> ```bash
+> exec 3<>/dev/tcp/127.0.0.1/8080
+> printf 'GET /api/info HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3
+> cat <&3
+> ```
+>
+> ili instalirati alat kao snap: `sudo snap install curl`.
 
 Promjena porta:
 
@@ -266,7 +277,7 @@ instalirana:
 ```bash
 snap list                       # medical-lexicon je na popisu
 snap services medical-lexicon
-curl http://localhost:8080/healthz
+sudo snap logs medical-lexicon -n 20
 ```
 
 ---

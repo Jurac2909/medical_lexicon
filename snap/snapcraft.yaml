@@ -45,6 +45,23 @@ parts:
       - libgomp1
     override-build: |
       craftctl default
+
+      # pip preskace pakete koji vec postoje u okruzenju gradnje, pa takav
+      # paket zavrsi izvan snapa i aplikacija na uredaju puca s
+      # ModuleNotFoundError. Prisilna instalacija u virtualno okruzenje snapa:
+      "$CRAFT_PART_INSTALL/bin/python3" -m pip install --no-cache-dir \
+        --ignore-installed packaging
+
+      # Provjera da su kljucne ovisnosti doista zavrsile u paketu. Bolje je
+      # prekinuti gradnju nego otkriti nedostatak tek na uredaju.
+      for module in packaging transformers torch aiohttp reportlab; do
+        if ! ls -d "$CRAFT_PART_INSTALL"/lib/python*/site-packages/"$module" \
+             > /dev/null 2>&1; then
+          echo "GRESKA: modul '$module' nije u snapu"
+          exit 1
+        fi
+      done
+
       # Python plugin instalira samo ovisnosti, pa se izvorni kod kopira rucno
       install -d "$CRAFT_PART_INSTALL/app-src/app"
       cp -r "$CRAFT_PART_SRC/app/." "$CRAFT_PART_INSTALL/app-src/app/"

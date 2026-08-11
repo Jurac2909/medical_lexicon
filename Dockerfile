@@ -18,9 +18,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-# Virtualno okruzenje s pristupom sistemskim paketima: tkinter dolazi iz
-# distribucijskog paketa python3-tk (gui cilj), ostale ovisnosti iz pipa.
-RUN python3 -m venv --system-site-packages /opt/venv
+# Virtualno okruzenje bez sistemskih paketa: tako pip sve ovisnosti stvarno
+# instalira u okruzenje umjesto da ih preskoci jer postoje u sustavu.
+# Tkinter iz paketa python3-tk (gui cilj) ostaje dostupan i bez toga, jer je
+# dio standardne biblioteke, a ne direktorija dist-packages.
+RUN python3 -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 WORKDIR /app

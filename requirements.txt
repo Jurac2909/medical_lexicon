@@ -2,6 +2,10 @@
 transformers>=4.30.0
 torch>=2.0.0
 
+# transformers ga uvozi pri ucitavanju modela, ali ga u novijim verzijama
+# vise ne navodi medu ovisnostima, pa se instalira izrijekom.
+packaging>=20.0
+
 # Asynchronous data fetching + headless web service (Docker, snap daemon)
 aiohttp>=3.9.0
 
