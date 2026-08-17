@@ -36,8 +36,9 @@ ssh-keygen -t ed25519
 > Bez ovog kljuca nije moguce prijaviti se na Ubuntu Core uredaj nakon prvog
 > pokretanja.
 
-4. Prijaviti se jednom na <https://launchpad.net> (istim Ubuntu One racunom).
-   Launchpad je potreban za gradnju arm64 snapa.
+4. Racun na GitHubu, za gradnju arm64 snapa preko GitHub Actions (korak 5).
+   Repozitorij mora biti javan jer su arm64 posluzitelji besplatni samo za
+   javne repozitorije.
 
 ---
 
@@ -172,24 +173,27 @@ medical-lexicon          # graficko sucelje se prikazuje kroz WSLg
 ## Korak 5: arm64 snap za Raspberry Pi
 
 Snap sadrzi torch, koji se instalira kao binarni paket za tocno odredenu
-arhitekturu, pa se arm64 verzija ne moze izgraditi na amd64 racunalu. Gradnju
-obavlja Launchpad:
+arhitekturu, pa se arm64 verzija ne moze izgraditi na amd64 racunalu.
 
-```bash
-cd ~/medical_lexicon
-snapcraft remote-build --launchpad-accept-public-upload
-```
+Gradnju obavlja GitHub Actions na arm64 posluzitelju (besplatno za javne
+repozitorije), prema radnom tijeku
+[`.github/workflows/build-snap.yml`](../.github/workflows/build-snap.yml):
 
-Traje 30 do 60 minuta. Rezultat je `medical-lexicon_1.0.0_arm64.snap`, koji
-treba prekopirati na Windows dio diska:
+1. Na GitHubu otvoriti karticu **Actions** > **Build snap** > **Run workflow**.
+2. Nakon zavrsetka (30 do 60 minuta) pri dnu stranice izvodenja preuzeti
+   artefakt `medical-lexicon-arm64`.
+3. Raspakirati zip; unutra je `medical-lexicon_1.0.0_arm64.snap`.
 
-```bash
-cp medical-lexicon_1.0.0_arm64.snap /mnt/c/Users/<korisnik>/Desktop/
-```
+Ostali nacini gradnje (Launchpad, arm64 uredaj, arm64 virtualni stroj) te
+njihova ogranicenja opisani su u
+[SNAP.md](SNAP.md#gradnja-za-raspberry-pi-arm64).
 
 ---
 
 ## Korak 6: Ubuntu Core u virtualnom stroju (vjezba)
+
+Prije rada s uredajem cijeli se postupak moze uvjezbati u virtualnom stroju s
+Ubuntu Coreom, uz amd64 snap:
 
 ```powershell
 multipass launch core24 --name core-test --memory 4G --disk 20G
@@ -197,17 +201,8 @@ multipass transfer medical-lexicon_1.0.0_amd64.snap core-test:/home/ubuntu/
 multipass shell core-test
 ```
 
-Unutar virtualnog stroja:
-
-```bash
-sudo snap install /home/ubuntu/medical-lexicon_1.0.0_amd64.snap --dangerous
-snap services medical-lexicon
-curl http://localhost:8080/api/info
-```
-
-Adresa za preglednik dobiva se s `multipass info core-test`.
-
-Detalji i varijanta s vlastitim imageom su u
+Postupak unutar virtualnog stroja, provjera rada bez `curl`-a (Ubuntu Core ga
+nema) i varijanta s vlastitim imageom opisani su u
 [UBUNTU-CORE.md](UBUNTU-CORE.md#vjezba-u-virtualnom-stroju-prije-rada-s-uredajem).
 
 ---
@@ -231,6 +226,6 @@ Kada uredaj bude dostupan:
 | 2. Docker Desktop | 30 min | da |
 | 3. VcXsrv | 10 min | da |
 | 4. WSL i snap gradnja | 1 do 2 h | da |
-| 5. arm64 snap (Launchpad) | 30 do 60 min cekanja | pokrenuti sto ranije |
+| 5. arm64 snap (GitHub Actions) | 30 do 60 min cekanja | pokrenuti sto ranije |
 | 6. Ubuntu Core u VM-u | 30 min | da |
 | 7. Raspberry Pi | 1 h | ne, treba uredaj |

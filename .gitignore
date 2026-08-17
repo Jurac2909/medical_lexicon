@@ -16,3 +16,6 @@ stage/
 # Izlazi aplikacije i predmemorija modela
 exports/
 hf-cache/
+
+# Dnevnik se generira pri pokretanju
+log.txt

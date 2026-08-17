@@ -7,8 +7,12 @@ pronadenih pojmova asinkrono se dohvacaju s Wikipedije, a rezultati se izvoze
 u CSV ili PDF.
 
 Projekt je nastao na kolegiju *Napredne tehnike programiranja*, a za kolegij
-*Operativni sustavi* prosiren je isporukom u tri oblika: **Docker slika**,
-**snap paket** i **Ubuntu Core uredaj (Raspberry Pi)**.
+*Operativni sustavi* prosiren je isporukom u obliku **Docker slike** i
+**snap paketa**.
+
+Priprema za isporuku na Ubuntu Core uredaj nalazi se u
+[docs/UBUNTU-CORE.md](docs/UBUNTU-CORE.md) i [ubuntu-core/](ubuntu-core/); taj
+je dio dovrsen do razine provjere u virtualnom stroju s Ubuntu Coreom 24.
 
 ## Sadrzaj
 
@@ -169,6 +173,9 @@ medical_lexicon/
 ├─ tests/                    # unittest + doctest
 ├─ Dockerfile                # ciljevi: base, web, gui
 ├─ docker-compose.yml        # servisi: web, gui, cli, test
+├─ docker-compose.linux.yml  # nadogradnja za X11 na Linux domacinu
+├─ .github/workflows/
+│  └─ build-snap.yml         # gradnja snapa za amd64 i arm64
 ├─ snap/
 │  ├─ snapcraft.yaml         # definicija snap paketa
 │  ├─ hooks/configure        # snap set port / host / daemon
@@ -225,11 +232,11 @@ Sto je pokriveno:
 
 ## Isporuka (Operativni sustavi)
 
-| Cjelina | Sadrzaj | Dokumentacija |
-|---|---|---|
-| Docker aplikacija | `Dockerfile` s ciljevima `web` i `gui`, `docker-compose.yml` s profilima za web servis, graficko sucelje, CLI i testove | [docs/DOCKER.md](docs/DOCKER.md) |
-| Snap aplikacija | `snap/snapcraft.yaml` s tri naredbe (GUI, CLI, daemon), konfiguracijski hook i pokretacke skripte | [docs/SNAP.md](docs/SNAP.md) |
-| Ubuntu Core i Raspberry Pi | model assertion za headless i kiosk izvedbu, postupak izrade i zapisivanja imagea, rad na uredaju | [docs/UBUNTU-CORE.md](docs/UBUNTU-CORE.md) |
+| Cjelina | Sadrzaj | Stanje | Dokumentacija |
+|---|---|---|---|
+| Docker aplikacija | `Dockerfile` s ciljevima `web` i `gui`, `docker-compose.yml` s profilima za web servis, graficko sucelje, CLI i testove | izradeno i provjereno | [docs/DOCKER.md](docs/DOCKER.md) |
+| Snap aplikacija | `snap/snapcraft.yaml` s tri naredbe (GUI, CLI, daemon), konfiguracijski hook i pokretacke skripte | izradeno i provjereno (amd64 i arm64) | [docs/SNAP.md](docs/SNAP.md) |
+| Ubuntu Core | model assertion za headless, kiosk i virtualni stroj, postupak izrade imagea i rada na uredaju | pripremljeno, provjereno u virtualnom stroju s Ubuntu Coreom 24 | [docs/UBUNTU-CORE.md](docs/UBUNTU-CORE.md) |
 
 ## Napomene
 

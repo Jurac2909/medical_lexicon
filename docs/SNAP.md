@@ -142,9 +142,23 @@ preuzetim modelom.
 
 Paket sadrzi `torch`, koji se instalira kao binarni wheel za tocno odredenu
 arhitekturu. Zbog toga **krizna izgradnja s amd64 na arm64 nije moguca** i
-`snapcraft.yaml` je namjerno ne dopusta. Postoje tri ispravna nacina:
+`snapcraft.yaml` je namjerno ne dopusta. Postoje cetiri nacina, poredana po
+pouzdanosti:
 
-**1. Gradnja na Raspberry Pi-u (preporuceno ako uredaj postoji)**
+**1. GitHub Actions na arm64 posluzitelju (nacin koristen u ovom projektu)**
+
+Repozitorij sadrzi radni tijek
+[`.github/workflows/build-snap.yml`](../.github/workflows/build-snap.yml) koji
+paket gradi na GitHubovom `ubuntu-24.04-arm` posluzitelju. Za javne
+repozitorije ti su posluzitelji besplatni.
+
+Pokretanje: kartica **Actions** > **Build snap** > **Run workflow**. Nakon
+gradnje se pri dnu stranice izvodenja preuzima artefakt
+`medical-lexicon-arm64` (zip s `.snap` datotekom).
+
+Ne trazi arm64 sklopovlje niti ovisi o Launchpadu.
+
+**2. Gradnja na arm64 uredaju**
 
 Na Pi se privremeno instalira Ubuntu Server 24.04 (64-bit) ili Raspberry Pi OS
 64-bit, na njemu se paket izgradi, a zatim se SD kartica prepise Ubuntu Coreom.
@@ -154,7 +168,7 @@ sudo snap install snapcraft --classic
 snapcraft pack --destructive-mode
 ```
 
-**2. `snapcraft remote-build` (bez vlastitog arm64 uredaja)**
+**3. `snapcraft remote-build` (Launchpad)**
 
 Gradnja se izvodi na Canonicalovim Launchpad posluziteljima:
 
