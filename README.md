@@ -17,8 +17,6 @@ je dio dovrsen do razine provjere u virtualnom stroju s Ubuntu Coreom 24.
 ## Sadrzaj
 
 - [Nacini rada](#nacini-rada)
-- [Arhitektura](#arhitektura)
-- [Brzo pokretanje](#brzo-pokretanje)
 - [REST API](#rest-api)
 - [Struktura projekta](#struktura-projekta)
 - [Testiranje](#testiranje)
@@ -41,35 +39,11 @@ bez X servera niti na Ubuntu Coreu, koji koristi Wayland, a Tk podrzava samo
 X11. Detaljno obrazlozenje je u
 [docs/UBUNTU-CORE.md](docs/UBUNTU-CORE.md#koji-se-nacin-rada-koristi-na-uredaju-i-zasto).
 
-## Arhitektura
-
-```
-                        +---------------------------+
-                        |         app/              |
-                        |                           |
-   sucelja  ----------> |  ner.py       neuronska   |
-                        |  fetcher.py   asyncio     |
-   gui.py    (Tkinter)  |  exporters.py CSV / PDF   |
-   main.py   (--cli)    |  models.py    dataclass   |
-   web.py    (aiohttp)  |  logger.py    dekorator   |
-                        |  paths.py     putanje     |
-                        +---------------------------+
-                                    |
-             +----------------------+----------------------+
-             |                      |                      |
-       Docker slika            snap paket            Ubuntu Core
-       (web, gui)         (GUI, CLI, daemon)        (Raspberry Pi)
-```
 
 Jezgra aplikacije ne poznaje nacin isporuke. Sucelja i pakiranja dodaju se oko
 nje, a jedina prilagodba koju je pakiranje zahtijevalo je
 [`app/paths.py`](app/paths.py), koji odreduje zapisiv direktorij (u snapu je
 `$SNAP` samo za citanje, a u kontejneru se koristi volumen `/data`).
-
-## Brzo pokretanje
-
-> Postupak instalacije svih potrebnih alata na Windowsima (Docker, WSL,
-> snapcraft, Multipass) opisan je korak po korak u [docs/SETUP.md](docs/SETUP.md).
 
 ### Lokalno
 
