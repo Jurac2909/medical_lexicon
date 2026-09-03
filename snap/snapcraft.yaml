@@ -91,7 +91,6 @@ apps:
   # NE koristi na Ubuntu Coreu.
   medical-lexicon:
     command: bin/run-gui.sh
-    extensions: [gnome]
     plugs:
       - desktop
       - desktop-legacy
