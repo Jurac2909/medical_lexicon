@@ -68,6 +68,11 @@
             "type": "app",
             "default-channel": "22/stable",
             "id": "01sV9tv4UTUQTU3jYsAF1gJ5qv7ZqGls"
+        },
+        {
+            "name": "medical-lexicon",
+            "type": "app",
+            "file": "medical-lexicon_1.0.0_arm64.snap"
         }
     ]
 }
