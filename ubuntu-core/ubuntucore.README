@@ -1,0 +1,3 @@
+ubuntu-image snap --allow-snapd-kernel-mismatch \
+  ubuntu-core/medical-lexicon-kiosk.model \
+  --snap medical-lexicon_1.0.0_arm64.snap
